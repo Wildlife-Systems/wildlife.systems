@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="https://audioblast.org/ab-api.css">
+    <title>WildlifeSystems: configuring apt</title>
+  </head>
+  
+  <body>
+    <div id="title">
+      <a href="/">
+        <img src="https://cdn.audioblast.org/wildlifesystems_flash.png"
+        alt="WildlifeSytems flash logo"
+        class="audioblast-flash" /></a>
+      <h1>WildlifeSystems</h1>
+      <div id="menu">
+        <h2>WildlifeSystems: configuring apt</h2>
+      </div>
+    </div>
+
+    <h2>Configuring apt</h2>
+    <h3>Ubuntu</h3>
+<code>
+    wget -O /usr/share/keyrings/ws.gpg https://wildlife.systems/ws.gpg
+
+    echo "Types: deb
+    URIs: https://apt.wildlife.systems
+    Suites: stable
+    Components: main
+    Architectures: all
+    Signed-By: /usr/share/keyrings/ws.gpg" |
+        sudo tee /etc/apt/sources.list.d/ws.sources > /dev/null
+</code>
+    
+  </body>
+</html>
