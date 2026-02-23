@@ -50,4 +50,24 @@
     <lastmod>2026-02-23</lastmod>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://wildlife.systems/sensors.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wildlife.systems/sensor-dht11.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wildlife.systems/sensor-bme680.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wildlife.systems/sensor-w1therm.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.6</priority>
+  </url>
 </urlset>
