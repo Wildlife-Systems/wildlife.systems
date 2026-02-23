@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ws-camerad: a multi-consumer camera daemon for Raspberry Pi sensor networks with shared memory, RTSP streaming, and hardware-accelerated encoding.">
+  <link rel="canonical" href="https://wildlife.systems/ws-camerad.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <title>ws-camerad — WildlifeSystems</title>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="brand">
+        <img src="https://cdn.audioblast.org/wildlifesystems_flash.png" alt="WildlifeSystems logo">
+        WildlifeSystems
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://devices.wildlife.systems">Live Devices</a></li>
+        <li><a href="https://docs.wildlife.systems">Docs</a></li>
+        <li><a href="apt-configuration.html">APT Setup</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <h1>ws-camerad</h1>
+      <p>Multi-consumer camera daemon for Raspberry Pi sensor networks.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="content-section">
+      <h2>Overview</h2>
+      <p>In distributed camera-based monitoring systems, the principal challenge is not frame acquisition but rather the concurrent distribution of captured frames to multiple consumers. Motion detectors, machine learning classifiers, human operators, and archival systems each require access to the same frame data, potentially at different times and in different formats.</p>
+      <p>ws-camerad operates as infrastructure rather than an end-user application. The daemon maintains exclusive camera ownership; consumers connect via shared memory (zero-copy frame access), Unix domain socket (control interface), or RTSP (remote access). Consumer process failures are isolated and do not affect the daemon or other connected consumers.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Continuous capture with zero frame loss</li>
+        <li>Concurrent multi-consumer access via C++ and Python client libraries</li>
+        <li>On-demand still image capture</li>
+        <li>Pre-event and post-event video clip extraction from rolling buffer</li>
+        <li>Remote streaming via RTSP</li>
+        <li>Hardware-accelerated H.264 encoding via V4L2 M2M</li>
+        <li>Zero-copy frame distribution via POSIX shared memory</li>
+        <li>Software frame rotation (0&deg;/90&deg;/180&deg;/270&deg;) using ARM NEON SIMD</li>
+        <li>Burst capture mode for rapid multi-frame acquisition</li>
+        <li>Virtual camera output via v4l2loopback kernel module</li>
+        <li>Multi-camera deployment support with independent instances</li>
+        <li>NoIR camera tuning with runtime profile switching</li>
+      </ul>
+    </section>
+
+    <section class="content-section">
+      <h2>Quick Start</h2>
+      <div class="code-block"><code>sudo apt update
+sudo apt install -y cmake build-essential libcamera-dev libjpeg-dev pkg-config
+
+git clone https://github.com/Wildlife-Systems/ws-camerad.git
+cd ws-camerad
+mkdir build && cd build
+cmake ..
+make -j4
+sudo make install</code></div>
+    </section>
+
+    <section class="content-section">
+      <h2>Usage Guides</h2>
+      <ul>
+        <li><a href="https://ebaker.me.uk/2026/02/22/architecture-of-ws-camerad.html">Architecture of ws-camerad</a></li>
+        <li><a href="https://ebaker.me.uk/2026/02/21/rotating-pi-camera-feed-with-ws-camerad.html">Rotating a Pi Camera Feed 90&deg; with ws-camerad</a></li>
+        <li><a href="https://ebaker.me.uk/2026/02/17/switching-pi-camera-colour-profiles.html">Switching Pi NoIR Camera Profiles at Runtime</a></li>
+      </ul>
+    </section>
+
+    <section class="content-section">
+      <h2>Source Code</h2>
+      <p>ws-camerad is open source and available on GitHub.</p>
+      <p><a href="https://github.com/Wildlife-Systems/ws-camerad">ws-camerad on GitHub &rarr;</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2026 WildlifeSystems &middot;
+    <a href="https://github.com/Wildlife-Systems">GitHub</a>
+  </footer>
+
+</body>
+</html>

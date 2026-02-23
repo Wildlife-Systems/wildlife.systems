@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="pi-pwr: power management tools for Raspberry Pi. Disable USB, WiFi, Bluetooth, HDMI and LEDs to extend battery and solar-powered uptime.">
+  <link rel="canonical" href="https://wildlife.systems/pi-pwr.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <title>pi-pwr — WildlifeSystems</title>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="brand">
+        <img src="https://cdn.audioblast.org/wildlifesystems_flash.png" alt="WildlifeSystems logo">
+        WildlifeSystems
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://devices.wildlife.systems">Live Devices</a></li>
+        <li><a href="https://docs.wildlife.systems">Docs</a></li>
+        <li><a href="apt-configuration.html">APT Setup</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <h1>pi-pwr</h1>
+      <p>Power management tools for Raspberry Pi.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="content-section">
+      <h2>Overview</h2>
+      <p>When operating from solar panels or batteries, reducing unnecessary power consumption can make a Raspberry Pi run more reliably for longer. pi-pwr is a simple command-line tool that allows you to disable USB, WiFi, Bluetooth, HDMI, and the device LEDs when they are not needed.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Disable USB ports to reduce power draw</li>
+        <li>Turn off WiFi and Bluetooth radios</li>
+        <li>Disable HDMI output</li>
+        <li>Control onboard LEDs</li>
+        <li>Simple command-line interface</li>
+        <li>Ideal for solar and battery-powered deployments</li>
+      </ul>
+    </section>
+
+    <section class="content-section">
+      <h2>Source Code</h2>
+      <p>pi-pwr is open source and available on GitHub.</p>
+      <p><a href="https://github.com/Wildlife-Systems/pi-pwr">pi-pwr on GitHub &rarr;</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2026 WildlifeSystems &middot;
+    <a href="https://github.com/Wildlife-Systems">GitHub</a>
+  </footer>
+
+</body>
+</html>

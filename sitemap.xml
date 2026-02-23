@@ -20,4 +20,29 @@
     <lastmod>2026-02-23</lastmod>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://wildlife.systems/ws-node.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wildlife.systems/pi-pwr.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wildlife.systems/sdc.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wildlife.systems/ws-camerad.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wildlife.systems/sensor-control.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.7</priority>
+  </url>
 </urlset>
