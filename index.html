@@ -1,80 +1,113 @@
-<html>
-  <head>
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="stylesheet" href="https://audioblast.org/ab-api.css">
-    <title>WildlifeSystems</title>
-  </head>
-  
-  <body>
-    <div id="title">
-      <a href="/">
-        <img src="https://cdn.audioblast.org/wildlifesystems_flash.png"
-        alt="WildlifeSytems flash logo"
-        class="audioblast-flash" /></a>
-      <h1>WildlifeSystems</h1>
-      <div id="menu">
-        <h2>Welcome to WildlifeSystems</h2>
-        <p>Open source tools for monitoring biodiversity using heterogenous networks.</p>
-        <p>
-          <a href="about.html">About the project</a> | 
-          <a href="https://devices.wildlife.systems">Live devices</a> | 
-          <a href="https://docs.wildlife.systems">Project manual</a> | 
-          <a href="contact.html">Contact</a>
-        </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WildlifeSystems provides open-source tools for monitoring biodiversity using heterogeneous Raspberry Pi sensor networks.">
+  <link rel="canonical" href="https://wildlife.systems/">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <title>WildlifeSystems — Open-Source Biodiversity Monitoring Tools</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WildlifeSystems",
+    "url": "https://wildlife.systems",
+    "logo": "https://cdn.audioblast.org/wildlifesystems_flash.png",
+    "description": "Open-source tools for monitoring biodiversity using heterogeneous sensor networks.",
+    "sameAs": [
+      "https://github.com/Wildlife-Systems"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="brand">
+        <img src="https://cdn.audioblast.org/wildlifesystems_flash.png" alt="WildlifeSystems logo">
+        WildlifeSystems
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://devices.wildlife.systems">Live Devices</a></li>
+        <li><a href="https://docs.wildlife.systems">Docs</a></li>
+        <li><a href="apt-configuration.html">APT Setup</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>WildlifeSystems</h1>
+    <p>Open-source tools for monitoring biodiversity using heterogeneous sensor networks.</p>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Tools &amp; Components</h2>
+    <div class="card-grid">
+
+      <div class="card">
+        <span class="badge">Node</span>
+        <h3>ws-node</h3>
+        <p>Deploy an autonomous biodiversity monitoring node on a Raspberry Pi.</p>
+        <a class="card-link" href="https://github.com/Wildlife-Systems/ws-node">View on GitHub</a>
       </div>
+
+      <div class="card">
+        <span class="badge">Power</span>
+        <h3>pi-pwr</h3>
+        <p>Power management for Raspberry Pi. Disable USB, WiFi, Bluetooth, HDMI and LEDs when running on solar or batteries to extend uptime.</p>
+        <a class="card-link" href="https://github.com/Wildlife-Systems/pi-pwr">View on GitHub</a>
+      </div>
+
+      <div class="card">
+        <span class="badge">Audio</span>
+        <h3>sdc &mdash; Sound Device Control</h3>
+        <p>Standard interface for installing, configuring and controlling sound capture hardware across large heterogeneous Pi deployments.</p>
+        <a class="card-link" href="https://github.com/Wildlife-Systems/sound-device-control">View on GitHub</a>
+      </div>
+
+      <div class="card">
+        <span class="badge">Imaging</span>
+        <h3>idc &mdash; Image Device Control</h3>
+        <p>Easily install and configure image capture devices on the Raspberry Pi.</p>
+      </div>
+
+      <div class="card">
+        <span class="badge">Sensors</span>
+        <h3>sc &mdash; Sensor Control</h3>
+        <p>Install and configure environmental sensors on the Raspberry Pi with a unified interface.</p>
+        <a class="card-link" href="https://github.com/Wildlife-Systems/sensor-control">View on GitHub</a>
+      </div>
+
+      <div class="card">
+        <span class="badge">Comms</span>
+        <h3>Node &harr; Cloud</h3>
+        <p>Communicate between field nodes and the cloud. Coming soon.</p>
+      </div>
+
     </div>
 
-    <div class="feature-container">
-      <div class="feature">
-        <h2>ws-node: deploy an autonomous node</h2>
-        <p>Monitor biodiversity from a Raspberry Pi.</p>
-        <a href="https://github.com/Wildlife-Systems/ws-node">ws-node on GitHub</a>
-      </div>
-      
-      <div class="feature">
-        <h2>pi-pwr: control power consumption of a Raspberry Pi</h2>
-        <p>Power management tools for Raspberry Pi.</p>
-        <p>When operating from solar panels or batteries reducing unnecessary power consumption
-        can make the Raspberry run more reliably, for longer. This simple command line tool allows
-        for disabling USB, WiFI, Bluetooth, HDMI and the device LEDs when they aren't needed.</p>
-        <a href="https://github.com/Wildlife-Systems/pi-pwr">pi-pwr on GitHub</a>
-      </div>
-      
-      <div class="feature">
-        <h2>sdc: manage sound playback and capture devices</h2>
-        <p>Easily install and configure sound devices on the Raspberry Pi.</p>
-        <p>For deployments of Raspberry Pi based acoustic sensors with multiple different sound
-        capture hardware this tool provides a standard interface for sound device control as well 
-        as a standardised installation script. This software simplifies device setup and control
-        for any number of Raspberry Pi devices, although the greatest benefit will come in managing
-        deployments of large, heterogenous networks.</p>
-        <a href="https://github.com/Wildlife-Systems/sound-device-control">sound-device-control on GitHub</a>
-      </div>
-      
-      <div class="feature">
-        <h2>idc: manage image capture devices</h2>
-        <p>Easily install and configure image devices on the Raspberry Pi.</p>
-      </div>
-
-      <div class="feature">
-        <h2>sc: sensor control</h2>
-        <p>Easily install and configure environmental sensors on the Raspberry Pi.</p>
-        <a href="https://github.com/Wildlife-Systems/sensor-control">sensor-control on GitHub</a>
-      </div>
-
-      <div class="feature">
-        <h2>as yet untitled</h2>
-        <p>Communicate between nodes and the cloud.</p>
-      </div>
+    <h2 class="section-title">Related Projects</h2>
+    <div class="related-projects">
+      <iframe
+        src="https://cdn.audioblast.org/embeds/projects_hex_flip.html"
+        title="Related projects"
+        scrolling="no"
+      ></iframe>
     </div>
+  </main>
 
-    <h1>Related Projects</h1>
-    <iframe 
-      src="https://cdn.audioblast.org/embeds/projects_hex_flip.html"
-      width="100%"
-      height="220px"
-      style="border-style: none;"
-      scrolling="no"
-    ></iframe>
-  </body>
+  <footer class="site-footer">
+    &copy; 2026 WildlifeSystems &middot;
+    <a href="https://github.com/Wildlife-Systems">GitHub</a>
+  </footer>
+
+</body>
 </html>
