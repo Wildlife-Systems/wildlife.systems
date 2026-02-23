@@ -43,7 +43,7 @@
   <header class="page-header">
     <div class="page-header-inner">
       <h1>sdc &mdash; Sound Device Control</h1>
-      <p>Standard interface for managing sound capture hardware on Raspberry Pi.</p>
+      <p>Manage acoustic sensors for wildlife soundscape monitoring.</p>
     </div>
   </header>
 
@@ -57,17 +57,22 @@
   <main class="container">
     <section class="content-section">
       <h2>Overview</h2>
-      <p>For deployments of Raspberry Pi based acoustic sensors with multiple different sound capture hardware, sdc provides a standard interface for sound device control as well as a standardised installation script.</p>
-      <p>This software simplifies device setup and control for any number of Raspberry Pi devices, although the greatest benefit comes in managing deployments of large, heterogeneous networks.</p>
+      <p>Passive acoustic monitoring is one of the most powerful non-invasive methods for surveying biodiversity. By recording wildlife soundscapes continuously, researchers can identify species by their vocalisations, track phenological shifts, and detect ecosystem disturbance &mdash; all without disturbing the habitat.</p>
+      <p>sdc provides a standard interface for installing, configuring, and controlling the diverse range of sound capture hardware used across Raspberry Pi acoustic sensor networks. It ensures consistent audio quality whether a deployment uses USB microphones, I2S MEMS arrays, or dedicated sound cards.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Why It Matters</h2>
+      <p>Large-scale acoustic monitoring networks often span dozens of sites with different microphone hardware. Without a unified control layer, managing recording settings, sample rates, and device drivers across a heterogeneous fleet becomes a significant barrier to scaling. sdc removes that barrier.</p>
     </section>
 
     <section class="content-section">
       <h2>Key Features</h2>
       <ul>
         <li>Unified interface for diverse sound capture hardware</li>
-        <li>Standardised installation across devices</li>
-        <li>Simplifies management of large heterogeneous networks</li>
-        <li>Supports playback and capture device configuration</li>
+        <li>Standardised installation and driver management</li>
+        <li>Consistent audio configuration across heterogeneous sensor networks</li>
+        <li>Supports both playback (e.g. acoustic lures) and capture devices</li>
       </ul>
     </section>
 

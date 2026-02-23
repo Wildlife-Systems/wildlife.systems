@@ -43,7 +43,7 @@
   <header class="page-header">
     <div class="page-header-inner">
       <h1>ws-camerad</h1>
-      <p>Multi-consumer camera daemon for Raspberry Pi sensor networks.</p>
+      <p>Camera infrastructure for wildlife camera traps and visual monitoring.</p>
     </div>
   </header>
 
@@ -57,8 +57,13 @@
   <main class="container">
     <section class="content-section">
       <h2>Overview</h2>
-      <p>In distributed camera-based monitoring systems, the principal challenge is not frame acquisition but rather the concurrent distribution of captured frames to multiple consumers. Motion detectors, machine learning classifiers, human operators, and archival systems each require access to the same frame data, potentially at different times and in different formats.</p>
-      <p>ws-camerad operates as infrastructure rather than an end-user application. The daemon maintains exclusive camera ownership; consumers connect via shared memory (zero-copy frame access), Unix domain socket (control interface), or RTSP (remote access). Consumer process failures are isolated and do not affect the daemon or other connected consumers.</p>
+      <p>Visual monitoring is essential for species identification, behavioural studies, and population counts. Camera traps have become a cornerstone of modern ecology &mdash; but in practice, multiple processes need simultaneous access to a single camera: a motion detector triggering on animal movement, a classifier identifying species in real time, a live feed for remote observers, and an archive recording continuously.</p>
+      <p>ws-camerad solves this by acting as shared camera infrastructure. The daemon maintains exclusive camera ownership and distributes frames to any number of concurrent consumers via shared memory (zero-copy), Unix sockets, or RTSP. Consumer crashes are isolated &mdash; no single failed classifier or recorder can bring down the camera feed.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Why It Matters</h2>
+      <p>Traditional camera traps capture images only when triggered and store them for later retrieval. ws-camerad goes further: it enables continuous recording with a rolling buffer, so events detected after the fact &mdash; a rare species passing through, or an unexpected behaviour &mdash; can still be extracted as video clips from frames already captured. Combined with NoIR camera support, it enables day-and-night monitoring of wildlife activity.</p>
     </section>
 
     <section class="content-section">
